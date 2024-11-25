@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Taxas | Simulador Financeiro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Simulador de Taxas</h1>
+            <p>Compare e economize em suas transações financeiras</p>
+        </header>
+
+        <main class="calculator">
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="faturamento">Faturamento Mensal</label>
+                    <div class="input-wrapper">
+                        <span class="currency-prefix">R$</span>
+                        <input type="text" id="faturamento" placeholder="0,00" value="1.000,00">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="parcelas">Número de Parcelas</label>
+                    <select id="parcelas">
+                        <option value="1">1x</option>
+                        <option value="2">2x</option>
+                        <option value="3">3x</option>
+                        <option value="4">4x</option>
+                        <option value="5">5x</option>
+                        <option value="6">6x</option>
+                        <option value="7">7x</option>
+                        <option value="8">8x</option>
+                        <option value="9">9x</option>
+                        <option value="10">10x</option>
+                        <option value="11">11x</option>
+                        <option value="12" selected>12x</option>
+                        <option value="13">13x</option>
+                        <option value="14">14x</option>
+                        <option value="15">15x</option>
+                        <option value="16">16x</option>
+                        <option value="17">17x</option>
+                        <option value="18">18x</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Tipo de Recebimento</label>
+                    <div class="plan-selector">
+                        <button class="plan-option" data-plan="0">Basic</button>
+                        <button class="plan-option selected" data-plan="1">Max</button>
+                        <button class="plan-option" data-plan="2">Flash</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-section">
+                <div class="result-card nossa">
+                    <h3>Nossa Taxa</h3>
+                    <div class="rate">
+                        <span id="taxaYellyFinal">2,96</span>%
+                    </div>
+                    <div class="value">
+                        <h4>Você Recebe</h4>
+                        <h2 id="valorYellyFinal">R$ 970,40</h2>
+                    </div>
+                </div>
+
+                <div class="result-card concorrente">
+                    <h3>Taxa Concorrente</h3>
+                    <div class="rate">
+                        <span id="taxaConcorrenteFinal">4,74</span>%
+                    </div>
+                    <div class="value">
+                        <h4>Você Receberia</h4>
+                        <h2 id="valorConcorrenteFinal">R$ 952,60</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="savings-section">
+                <div class="savings-card">
+                    <h3>Sua Economia Mensal</h3>
+                    <div class="savings-value">
+                        <span id="economiaYellyFinal">R$ 17,80</span>
+                    </div>
+                </div>
+                <div class="savings-card annual">
+                    <h3>Sua Economia Anual</h3>
+                    <div class="savings-value">
+                        <span id="concorrentePerderiaFinal">R$ 178,00</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
